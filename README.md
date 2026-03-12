@@ -3,7 +3,6 @@
 *Video to AVIF converter*
 
 ![sample avif file](sample.avif)
-67kB AVIF file sample
 
 (Very early version of...)
 A batch script for converting video files to AVIF using FFmpeg.
