@@ -83,7 +83,7 @@ if [[ -d "$output" ]]; then
 fi
 
 # Set output file extension
-output="$output.$filetype";;
+output="$output.$filetype"
 
 # Validate Clipping
 if [[ -n "$start_time" && -z "$end_time" ]]; then
