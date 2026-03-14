@@ -160,13 +160,13 @@ $(basename "$0") [input_file] [arguments]
 
 ${GREEN}Arguments:${OFF}
   -o  Output file. Default is the same as input file, sans extension
-  -r  Scale or size. Width of the animation in pixels
+  -r  Resize output width in pixels. Default is original input size
   -f  Framerate in frames per seconds (default 15)
   -s  Start time of the animation (HH:MM:SS.MS)
   -e  End time of the animation (HH:MM:SS.MS)
   -x  Crop the input video (out_w:out_h:x:y)
-  -y  Preview animation using 'FFplay' (part of FFmpeg)
-      (Useful for testing cropping, but will not use exact start/end time)
+  -y  Preview animation using FFplay (part of FFmpeg)
+      Useful for testing cropping, but will not use exact start/end time
   -p  Opens the resulting animation in the default image viewer
   -v  Set FFmpeg log level (default: error)
 
