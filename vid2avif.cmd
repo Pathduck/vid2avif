@@ -31,7 +31,7 @@ SET "output=%~n1"
 
 :: Validate input file
 IF NOT EXIST "%input%" (
-	ECHO %RED%Input file not found: "%input%"%OFF%
+	ECHO %RED%Input file not found: !input! %OFF%
 	GOTO :EOF
 )
 
@@ -150,7 +150,7 @@ ffmpeg -v %loglevel% %trim% -i "%input%" ^
 
 :: Checking if file was created and cleaning up if not
 IF NOT EXIST "%output%" (
-	ECHO ECHO %RED%Failed to generate animation: %output% not found.%OFF%
+	ECHO ECHO %RED%Failed to generate animation: !output! not found.%OFF%
 	GOTO :cleanup
 )
 
@@ -173,13 +173,13 @@ ECHO %~n0 [input_file] [arguments]
 ECHO:
 ECHO %GREEN%Arguments:%OFF%
 ECHO  -o  Output file. Default is the same as input file, sans extension
-ECHO  -r  Scale or size. Width of the animation in pixels
+ECHO  -r  Resize output width in pixels. Default is original input size
 ECHO  -f  Framerate in frames per seconds (default 15)
 ECHO  -s  Start time of the animation (HH:MM:SS.MS)
 ECHO  -e  End time of the animation (HH:MM:SS.MS)
 ECHO  -x  Crop the input video (out_w:out_h:x:y)
-ECHO  -y  Preview animation using 'FFplay' (part of FFmpeg)
-ECHO      (Useful for testing cropping, but will not use exact start/end time)
+ECHO  -y  Preview animation using FFplay (part of FFmpeg)
+ECHO      Useful for testing cropping, but will not use exact start/end time
 ECHO  -p  Opens the resulting animation in the default image viewer
 ECHO  -v  Set FFmpeg log level (default: error)
 ECHO:
