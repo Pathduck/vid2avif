@@ -107,7 +107,7 @@ IF DEFINED fps (
 :script_start
 :: Putting together filters
 SET "filters=fps=%fps%"
-IF DEFINED crop (SET "filters=%filters%,crop=%crop%")
+IF DEFINED crop ( SET "filters=%filters%,crop=%crop%" )
 SET "filters=%filters%,scale=%scale%:-1:flags=lanczos+accurate_rnd+full_chroma_int"
 
 :: FFplay preview
