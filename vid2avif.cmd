@@ -182,5 +182,4 @@ ECHO  -y  Preview animation using FFplay (part of FFmpeg)
 ECHO      Useful for testing cropping, but will not use exact start/end time
 ECHO  -p  Opens the resulting animation in the default image viewer
 ECHO  -v  Set FFmpeg log level (default: error)
-ECHO:
 GOTO :EOF
