@@ -97,13 +97,11 @@ IF DEFINED end_time (
 )
 
 :: Validate Framerate
-IF DEFINED fps (
-	IF "!fps!"=="-" (
-		SET "fps=source_fps"
-	) ELSE IF !fps! LSS 1 (
-		ECHO  %RED%Framerate ^(-f^) must be greater than 0.%OFF%
-		GOTO :EOF
-	)
+IF "!fps!"=="-" (
+	SET "fps=source_fps"
+) ELSE IF !fps! LSS 1 (
+	ECHO  %RED%Framerate ^(-f^) must be greater than 0.%OFF%
+	GOTO :EOF
 )
 
 :script_start

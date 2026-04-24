@@ -95,12 +95,10 @@ elif [[ -n "$end_time" && -n "$start_time" ]]; then
 fi
 
 # Validate Framerate
-if [[ -n $fps ]]; then
-	if [[ "$fps" == "-" ]]; then
-		fps="source_fps"
-	elif [[ $fps -le 1 ]]; then
-		echo ${RED}"Framerate (-f) must be greater than 0."${OFF}; exit 1
-	fi
+if [[ "$fps" == "-" ]]; then
+	fps="source_fps"
+elif [[ $fps -le 1 ]]; then
+	echo ${RED}"Framerate (-f) must be greater than 0."${OFF}; exit 1
 fi
 
 # Putting together filters
