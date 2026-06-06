@@ -4,7 +4,6 @@
 
 ![sample avif file](sample.avif)
 
-(Very early version of...)
 A batch script for converting video files to AVIF using FFmpeg.
 Supports scaling, trimming and cropping and preview using 'ffplay'.
 
