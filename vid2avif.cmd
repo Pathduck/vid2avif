@@ -1,9 +1,9 @@
-@ECHO OFF
 :: Description: Video to AVIF converter
 :: By: Pathduck
 :: Version: 1.0
 :: Url: https://github.com/Pathduck/vid2avif/
 :: License: GNU General Public License v3.0 (GPLv3)
+@ECHO OFF
 
 :: Enable delayed variable expension
 SETLOCAL ENABLEDELAYEDEXPANSION
